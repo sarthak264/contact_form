@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <title>Contact form</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <form action="POST" data-netlify="true">
+      <div class="input">
+        <label for="name">Full Name</label>
+        <input type="text" name="name" id="name" placeholder="Full Name" />
+      </div>
+      <div class="input">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Your email address"
+        />
+      </div>
+      <div class="input">
+        <label for="message">Enter your message</label>
+        <textarea
+          name="message"
+          id="message"
+          placeholder="Enter your message here"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </div>
+      <div data-netlify-recaptcha="true"></div>
+    </form>
+  </body>
 </html>
